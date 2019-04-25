@@ -438,6 +438,11 @@ h1, h2, h3, h4, h5,
 
 .site-logo a img {
     height: 128px;
+    margin-top: -28px;
+    margin-bottom: -100px;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
 }
 
 .site-navbar {
@@ -922,6 +927,13 @@ h1, h2, h3, h4, h5,
 
 .sticky-wrapper.is-sticky .site-navbar .site-logo a {
     color: #000;
+}
+
+.sticky-wrapper.is-sticky .site-navbar .site-logo a img {
+    height: 64px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 32px;
 }
 
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li {
