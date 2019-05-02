@@ -1685,3 +1685,8 @@ h1, h2, h3, h4, h5,
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.owl-carousel .owl-item img {
+    width: unset;
+    height: 100%;
+}
