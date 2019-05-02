@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title> - Home</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+
+    
+    <div id="container">
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="index.html">Home</a>
+      </nav>
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+    <a href="Manufacturing.html">
+            <img src="media/small/Manufacturing/Batch1/IMG_20190301_153015.jpg" alt="">
+            <div class="caption" style="display: inline-block">
+              <h3>Manufacturing</h3>
+              <div class="summary">2 albums, 23 photos</div>
+            </div>
+          </a><a href="Misc.html">
+            <img src="media/small/Misc/IMG_20190307_163432.jpg" alt="">
+            <div class="caption" style="display: inline-block">
+              <h3>Misc</h3>
+              <div class="summary">10 photos</div>
+            </div>
+          </a><a href="Testing.html">
+            <img src="media/small/Testing/Lake Lanier/IMG_20190409_135906.jpg" alt="">
+            <div class="caption" style="display: inline-block">
+              <h3>Testing</h3>
+              <div class="summary">2 albums, 19 photos</div>
+            </div>
+          </a><a href="Expo.html">
+            <img src="media/small/Expo/IMG_20190423_154832.jpg" alt="">
+            <div class="caption" style="display: inline-block">
+              <h3>Expo</h3>
+              <div class="summary">6 photos</div>
+            </div>
+          </a>  </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+      </ul>
+    
+      <!--
+        Optional footer
+      -->
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
