@@ -1126,8 +1126,8 @@ h1, h2, h3, h4, h5,
     background: #352961;
     padding: 30px;
     max-width: 300px;
-    bottom: -20%;
-    right: -20%;
+    bottom: -10%;
+    right: -10%;
 }
 
 @media (max-width: 991.98px) {
